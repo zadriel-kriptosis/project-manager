@@ -49,8 +49,8 @@ Follow these steps to get the project up and running on your local machine:
 1. **Clone the repository:**
 
     ```bash
-    git clone https://github.com/your-username/project-name.git
-    cd project-name
+    git clone https://github.com/zadriel-kriptosis/project-manager.git
+    cd project-manager
     ```
 
 2. **Install dependencies:**
