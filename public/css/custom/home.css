@@ -1,0 +1,136 @@
+.markdown-content {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+.dark .markdown-content {
+    color: #e2e8f0; /* Text color for dark mode */
+}
+
+.markdown-content h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.5rem;
+}
+
+.dark .markdown-content h1 {
+    border-bottom-color: #4a5568; /* Dark mode for header border */
+}
+
+.markdown-content h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #2d3748;
+}
+
+.dark .markdown-content h2 {
+    color: #a0aec0; /* Dark mode for sub-headers */
+}
+
+.markdown-content h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+    color: #4a5568;
+}
+
+.dark .markdown-content h3 {
+    color: #cbd5e0; /* Dark mode for smaller headers */
+}
+
+.markdown-content p {
+    margin-bottom: 1rem;
+    color: #4a4a4a;
+}
+
+.dark .markdown-content p {
+    color: #cbd5e0; /* Dark mode for paragraphs */
+}
+
+.markdown-content ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    margin-bottom: 1.25rem;
+    padding-left: 1rem;
+}
+
+.dark .markdown-content ul {
+    color: #e2e8f0; /* Dark mode for list items */
+}
+
+.markdown-content a {
+    color: #3182ce;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+.markdown-content a:hover {
+    color: #2b6cb0;
+    border-bottom-color: #3182ce;
+}
+
+.dark .markdown-content a {
+    color: #90cdf4; /* Lighter blue for links in dark mode */
+}
+
+.markdown-content pre {
+    background-color: #f7fafc;
+    padding: 1rem;
+    border-radius: 0.375rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.875rem;
+    overflow-x: auto;
+}
+
+.dark .markdown-content pre {
+    background-color: #2d3748; /* Dark background for code blocks */
+}
+
+.markdown-content code {
+    background-color: #edf2f7;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.875rem;
+}
+
+.dark .markdown-content code {
+    background-color: #4a5568; /* Darker background for inline code */
+}
+
+.markdown-content blockquote {
+    padding: 1rem;
+    border-left: 4px solid #3182ce;
+    background-color: #f7fafc;
+    margin-bottom: 1.5rem;
+    color: #2d3748;
+    font-style: italic;
+}
+
+.dark .markdown-content blockquote {
+    background-color: #2d3748; /* Dark background for blockquotes */
+    color: #e2e8f0; /* Light text for blockquotes */
+    border-left-color: #63b3ed; /* Lighter blue for the left border */
+}
+
+.markdown-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem;
+}
+
+.markdown-content hr {
+    border: 0;
+    height: 1px;
+    background: #e2e8f0;
+    margin: 0.5rem 0;
+}
+
+.dark .markdown-content hr {
+    background: #4a5568; /* Darker horizontal line for dark mode */
+}

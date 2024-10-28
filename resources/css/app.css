@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Button Styles */
+.btn-primary {
+    @apply bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600;
+}
+
+.btn-secondary {
+    @apply bg-gray-500 text-white font-bold py-2 px-4 rounded hover:bg-gray-600;
+}
+
+.btn-danger {
+    @apply bg-red-500 text-white font-bold py-2 px-4 rounded hover:bg-red-600;
+}
+
+/* Custom Card Styles */
+.card {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-md p-6;
+}
+
+.card-title {
+    @apply text-xl font-semibold mb-4 dark:text-white;
+}
+
+.card-item {
+    @apply mb-3 p-3 bg-gray-100 dark:bg-gray-700 rounded;
+}
+
+.card-description {
+    @apply text-sm text-gray-500 dark:text-gray-400;
+}
+
+.card-link {
+    @apply text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-600;
+}
+
+/* New Design for View All Links */
+.btn-link {
+    @apply inline-block text-center text-blue-600 font-semibold bg-transparent border border-blue-500 rounded py-2 px-4 hover:bg-blue-500 hover:text-white dark:text-blue-400 dark:border-blue-400 dark:hover:bg-blue-400 dark:hover:text-gray-800;
+}
+
+.scrollable-section {
+    @apply overflow-y-auto max-h-64 space-y-3;
+}

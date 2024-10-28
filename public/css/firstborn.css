@@ -1,0 +1,345 @@
+/*Font faces*/
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto/Roboto-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('/fonts/Roboto/Roboto-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/*Error success message manage */
+@keyframes fadeOutCollapse {
+    0%, 50% {
+        opacity: 1;
+        max-height: 50px; /* Adjust based on your content's actual height */
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        max-height: 0;
+        visibility: hidden; /* Ensures it won't display or take up space */
+        padding: 0;
+        margin: 0;
+    }
+}
+
+.fade-out-collapse {
+    animation: fadeOutCollapse 7s ease-in-out 1;
+    animation-fill-mode: forwards; /* Keep the end state after the animation completes */
+}
+
+    /* Initial visibility */
+.currency-section {
+    display: none;
+}
+
+/* Default visibility for BTC section */
+#btc-section {
+    display: block; /* BTC is visible by default */
+}
+
+/* Toggle visibility based on radio button */
+input#xmr-tab:checked ~ .currency-sections #xmr-section,
+input#btc-tab:checked ~ .currency-sections #btc-section {
+    display: block;
+}
+
+input#xmr-tab:checked ~ .currency-sections #btc-section,
+input#btc-tab:checked ~ .currency-sections #xmr-section {
+    display: none;
+}
+
+/* Styling for active tab */
+input#xmr-tab:checked + label,
+input#btc-tab:checked + label {
+    background-color: #4a5568; /* Active background color */
+    color: white;
+    font-weight: bold;
+}
+
+/* Make BTC tab look active on initial page load */
+#btc-tab + label {
+    background-color: #4a5568; /* Active background color */
+    color: white;
+    font-weight: bold;
+}
+
+/* Adjust BTC tab styling when XMR tab is checked */
+input#xmr-tab:checked ~ #btc-tab + label {
+    background-color: transparent; /* Resets to default when not active */
+    color: black; /* Resets text color to default */
+    font-weight: normal; /* Resets weight to normal */
+}
+    /* Initial visibility */
+    .card-section {
+        display: none;
+        transition: transform 0.8s ease-in-out;
+        transform-style: preserve-3d;
+    }
+
+    /* Default visibility for the front section */
+    #cardFront {
+        display: block; /* Front is visible by default */
+    }
+
+    /* Toggle visibility based on the checkbox */
+    #cardSwitch:checked ~ .relative #cardBack {
+        display: block;
+
+    }
+    #cardSwitch:checked ~ .relative #cardFront {
+        display: none;
+    }
+
+    #cardSwitch:checked + label > span:last-child {
+        transform: translateX(5rem); /* Slide the toggle to indicate active state */
+        background-color: #7388be; /* Change the background color when active */
+        transition: transform 0.3s, background-color 0.3s; /* Smooth transition for transform and color */
+    }
+
+
+    /*login button*/
+    .cta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2px 6px;
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+        background: rgb(17 24 39);
+        transition: 1s;
+        box-shadow: 6px 6px 0 black;
+        transform: skewX(-15deg);
+        border: none;
+        border-radius: 30px;
+    }
+
+    .cta:focus {
+        outline: none;
+    }
+
+    .cta:hover {
+        transition: 0.5s;
+        box-shadow: 10px 10px 0 rgb(190 24 93);
+    }
+
+    .cta .second {
+        transition: 0.5s;
+        margin-left: 20px; /* Ensure there is space for animation */
+    }
+
+    .cta:hover .second {
+        transition: 0.5s;
+        margin-left: 45px; /* Animate to this margin */
+    }
+
+    .span {
+        transform: skewX(15deg);
+        margin-left: 10px;
+    }
+
+    .second {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: skewX(15deg);
+    }
+
+    #arrow .one,
+    #arrow .two,
+    #arrow .three {
+        transition: transform 0.4s, fill 0.4s;
+    }
+
+    #arrow .one {
+        transform: translateX(-60%);
+    }
+
+    #arrow .two {
+        transform: translateX(-30%);
+    }
+
+    #arrow .three {
+        transform: translateX(0);
+    }
+
+    .cta:hover #arrow .three {
+        animation: color_anim 1s infinite 0.2s;
+    }
+
+    .cta:hover #arrow .one {
+        transform: translateX(0);
+        animation: color_anim 1s infinite 0.6s;
+    }
+
+    .cta:hover #arrow .two {
+        transform: translateX(0);
+        animation: color_anim 1s infinite 0.4s;
+    }
+
+    @keyframes color_anim {
+        0% {
+            fill: white;
+        }
+        50% {
+            fill: rgb(190 24 93);
+        }
+        100% {
+            fill: white;
+        }
+    }
+
+
+/*themecolorchange*/
+    .switch {
+        font-size: 17px;
+        position: relative;
+        display: inline-block;
+        width: 64px;
+        height: 34px;
+    }
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #73C0FC;
+        transition: .4s;
+        border-radius: 30px;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 30px;
+        width: 30px;
+        border-radius: 20px;
+        left: 2px;
+        bottom: 2px;
+        z-index: 2;
+        background-color: #e8e8e8;
+        transition: .4s;
+    }
+
+    .sun svg {
+        position: absolute;
+        top: 6px;
+        left: 36px;
+        z-index: 1;
+        width: 24px;
+        height: 24px;
+    }
+
+    .moon svg {
+        fill: #73C0FC;
+        position: absolute;
+        top: 5px;
+        left: 5px;
+        z-index: 1;
+        width: 24px;
+        height: 24px;
+    }
+
+    /* .switch:hover */.sun svg {
+                           animation: rotate 15s linear infinite;
+                       }
+
+    @keyframes rotate {
+
+        0% {
+            transform: rotate(0);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    /* .switch:hover */.moon svg {
+                           animation: tilt 5s linear infinite;
+                       }
+
+    @keyframes tilt {
+
+        0% {
+            transform: rotate(0deg);
+        }
+
+        25% {
+            transform: rotate(-10deg);
+        }
+
+        75% {
+            transform: rotate(10deg);
+        }
+
+        100% {
+            transform: rotate(0deg);
+        }
+    }
+
+    .input:checked + .slider {
+        background-color: #183153;
+    }
+
+    .input:focus + .slider {
+        box-shadow: 0 0 1px #183153;
+    }
+
+    .input:checked + .slider:before {
+        transform: translateX(30px);
+    }
+
+
+/* Light Theme Background */
+.bgmodel {
+    width: 100%;
+    height: 100%;
+    background-image: repeating-radial-gradient(  #0a319e 80%,#2f312f 90%,#3f4549 90%);
+    background-size: 65px 65px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Dark Theme Background */
+.dark .bgmodel {
+    background-image: repeating-radial-gradient(  #0c0a0a 80%,#2f312f 90%,#3f4549 90%);
+    background-size: 65px 65px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    border-radius: 10px; /* Rounded corners */
+}
+
+
+/*on - off toggle*/
+.toggle-knob {
+    transition: transform 0.3s;
+}
+.toggle-background {
+    transition: background-color 0.3s;
+}
+
+
